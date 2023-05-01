@@ -16,6 +16,8 @@ router.get("/", champion_router.getAll);
 // (Étape 2) Ajout de la route qui permet d'afficher un seul étudiant grâce à son identifant
 router.get("/:id", champion_router.getById);
 
+router.get('/lane/:id', champion_router.getChampions);
+
 // (Étape 2) Ajout de la route qui permet de modifier un seul étudiant grâce à son identifant
 router.put("/:id", champion_router.update);
 

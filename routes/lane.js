@@ -16,6 +16,12 @@ router.get("/", lane_controller.getAll);
 // (Étape 2) Ajout de la route qui permet d'afficher un seul étudiant grâce à son identifant
 router.get("/:id", lane_controller.getById);
 
+// (Étape 2) Ajout de la route qui permet d'afficher un seul étudiant grâce à son identifant
+
+
+
+
+
 // (Étape 2) Ajout de la route qui permet de modifier un seul étudiant grâce à son identifant
 router.put("/:id", lane_controller.update);
 

@@ -129,6 +129,19 @@ exports.getById = [paramIdValidationRule(), checkValidity, (req, res, next) => {
     });
 }];
 
+
+// getChampionsByLane
+exports.getChampions = [paramIdValidationRule(), checkValidity, (req, res, next) => {
+    Student.find({ lane: req.params.id })
+        .populate("lane")
+        .exec(function (err, result) {
+            if (err) {
+                return res.status(500).json(err);
+            }
+            return res.status(200).json(result);
+        });
+}];
+
 // Update
 exports.update = [paramIdValidationRule(), studentValidationRules(), checkValidity,(req, res, next) => {
     

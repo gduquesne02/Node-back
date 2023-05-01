@@ -8,7 +8,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var studentRouter = require('./routes/lane');
+var laneRouter = require('./routes/lane');
 var championRouter = require('./routes/champion');
 
 var app = express();
@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use('/', indexRouter);
-app.use('/lane', championRouter);
+app.use('/lane', laneRouter);
 app.use('/champion', championRouter);
 
 module.exports = app;
