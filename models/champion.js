@@ -2,17 +2,6 @@
 var mongoose = require("mongoose");
 const { DateTime } = require("luxon");
 
-// (Étape 2) Définition de la méthode qui permet de valider le format d'un email
-const validateEmail = function (email) {
-  var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  return re.test(email);
-};
-
-// (Étape 2) Définition du schéma student
-// https://mongoosejs.com/docs/guide.html
-// https://mongoosejs.com/docs/schematypes.html#schematype-options
-
-
 
 const champions = new mongoose.Schema({
   _id: { type: Number, required: true },
@@ -23,6 +12,7 @@ const champions = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  image: { type: String, required: true },
   lane: { type: Number, required: true, ref: "lane" },
 
 });

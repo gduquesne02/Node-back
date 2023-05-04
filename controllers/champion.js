@@ -28,7 +28,7 @@ const studentValidationRules = () => {
             .escape()
             .withMessage("carateristiques must be specified."),
 
-        body("dateApparition", "Invalid date of birth")
+        body("dateApparition", "Invalid date")
             .optional({ checkFalsy: true })
             .isISO8601()
             .toDate(),
