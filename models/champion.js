@@ -12,7 +12,6 @@ const champions = new mongoose.Schema({
     type: Date,
     required: true,
   },
-  image: { type: String, required: true },
   lane: { type: Number, required: true, ref: "lane" },
 
 });
